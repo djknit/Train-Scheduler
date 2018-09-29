@@ -28,6 +28,7 @@ header {
 h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
+    display: inline-block;
 }
 
 #schedule-section, #add-train-section {
@@ -38,6 +39,13 @@ h3 {
 
 #schedule-section {
     min-height: 350px;
+}
+
+#update-schedule {
+    float: right;
+    margin: 24px 9px;
+    padding: 5px;
+    background-color: whitesmoke;
 }
 
 #add-train input {
@@ -52,7 +60,27 @@ h3 {
     width: 90px;
 }
 
-#schedule th, #schedule td {
-    min-width: 160px;
-    text-align: left;
+@media screen and (min-width: 830px) {
+    #schedule th, #schedule td {
+        min-width: 160px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #schedule th, #schedule td {
+        padding-right: 10px;
+        text-align: left;
+    }
+}
+
+#schedule th.x-column, #schedule td.x-column {
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+}
+
+.remove {
+    width: 15px;
+    padding: 0;
 }

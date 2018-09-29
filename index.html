@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
+    <!-- Linking Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script> -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script> -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-functions.js"></script> -->
     <!-- Linking jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Linking Moment.js -->
@@ -25,9 +32,12 @@
     <!-- Train schedule -->
     <div id="schedule-section">
         <h3>Train Schedule</h3>
+        <button id="update-schedule">Update</button>
         <table id="schedule">
             <thead>
                 <tr>
+                    <!-- The first column is for the remove-train buttons and has no heading -->
+                    <th class="x-column"></th>
                     <th>Name</th>
                     <th>Destination</th>
                     <th>Frequency (min)</th>
@@ -68,6 +78,7 @@
  
     <!-- Linking my javascript -->
     <script type="text/javascript" src="assets/javascript/trainScheduler.js"></script>
+    <script type="text/javascript" src="assets/javascript/firebaseHandler.js"></script>
 
 </body>
 </html>
