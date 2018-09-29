@@ -10,14 +10,63 @@
     <!-- Linking Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- Linking my CSS -->
-    <link type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 
 <body>
-    
 
+    <!-- Header -->
+    <header>
+        <div id="header-content">
+            <h1 id="title">Train Schedule Manager</h1>
+        </div>
+    </header>
+    
+    <!-- Train schedule -->
+    <div id="schedule-section">
+        <h3>Train Schedule</h3>
+        <table id="schedule">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Train Arrives</th>
+                    <th>Minutes Until Next Train</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-body">
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Form for adding new trains -->
+    <div id="add-train-section">
+        <form id="add-train">
+            <h3>Add a train to the schedule</h3>
+            <label for="name">Name</label>
+            <br>
+            <input id="name" type="text" placeholder="Train name...">
+            <br>
+            <label for="destination">Destination</label>
+            <br>
+            <input id="destination" type="text" placeholder="Train's destination...">
+            <br>
+            <label for="first-train">Time of first train</label>
+            <br>
+            <input id="first-train" type="time">
+            <br>
+            <label for="frequency">Frequency of departure in minutes</label>
+            <br>
+            <input id="frequency" type="number">
+            <br>
+            <input type="submit" id="add-train-submit" value="Add Train">
+        </form>            
+    </div>
+ 
     <!-- Linking my javascript -->
     <script type="text/javascript" src="assets/javascript/trainScheduler.js"></script>
-    
+
 </body>
 </html>
