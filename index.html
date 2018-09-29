@@ -43,23 +43,24 @@
 
     <!-- Form for adding new trains -->
     <div id="add-train-section">
+        <h3>Add a train to the schedule</h3>
+        <p id="form-instructions">Please enter a train that is currently running.</p>
         <form id="add-train">
-            <h3>Add a train to the schedule</h3>
             <label for="name">Name</label>
             <br>
-            <input id="name" type="text" placeholder="Train name...">
+            <input id="name" class="new" type="text" placeholder="Train name...">
             <br>
             <label for="destination">Destination</label>
             <br>
-            <input id="destination" type="text" placeholder="Train's destination...">
+            <input id="destination" class="new" type="text" placeholder="Train's destination...">
             <br>
             <label for="first-train">Time of first train</label>
             <br>
-            <input id="first-train" type="time">
+            <input id="first-train" class="new" type="time">
             <br>
             <label for="frequency">Frequency of departure in minutes</label>
             <br>
-            <input id="frequency" type="number">
+            <input id="frequency" class="new" type="number">
             <br>
             <input type="submit" id="add-train-submit" value="Add Train">
         </form>            

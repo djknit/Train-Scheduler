@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    background-image: url("../images/texturetastic_gray.png"); 
+    background-image: url("../images/texturetastic_gray.png");
+    padding-bottom: 20px;
 }
 
 #header-content, #schedule-section, #add-train-section {
