@@ -30,7 +30,7 @@ function storeTrains() {
     });
 }
 
-// At the initial load and on subsequent data value changes, get a snapshot of the current data
+// At the initial load and on subsequent data value changes, update the page after updating the trains array from the database
 database.ref().on("value", function(snapshot) {
     // console.log(snapshot.val());
     if (snapshot.val()) {

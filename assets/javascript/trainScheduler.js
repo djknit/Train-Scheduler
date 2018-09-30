@@ -37,7 +37,7 @@ $("#add-train-submit").on("click", function(event) {
         var newTrain = {
             name: newName,
             destination: newDestination,
-            firstTrainTime: newFirstTrain,
+            firstTrainTime: moment(newFirstTrain, "hh:mm").format("hh:mm a"),
             frequency: newFrequency,
             nextArrival: {},
             // Methods
@@ -54,7 +54,7 @@ function calculateNextArrival() {
     // Grab the current point in time and create a moment object
     var now = moment();
     // Create moment object for first train departure time
-    var firstTrainMoment = moment(this.firstTrainTime, "hh:mm a");
+    var firstTrainMoment = moment(this.firstTrainTime, "hh:mm");
     // Determine the minutes since the first departure
     var timeSinceFirstTrain = now.diff(firstTrainMoment, "minutes");
     // If timeSinceFirstTrain is negative, the first departure time is later than the current time, so the first departure must have been during the previous day.
@@ -89,7 +89,7 @@ function displayTrains() {
         train.calculateNextArrival();
         // Create a new table row element filled with the trains information
         var newTr = $(
-            `<tr>
+            `<tr title="${train.name} to ${train.destination}: First train departed at ${train.firstTrainTime}">
                 <td class="x-column"><button class="remove" id="${index}">x</button></td>
                 <td>${train.name}</td>
                 <td>${train.destination}</td>
